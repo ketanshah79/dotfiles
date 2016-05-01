@@ -20,3 +20,11 @@ else
 	fi;
 fi;
 unset doIt;
+
+
+echo "
+[user]
+	email = '$GIT_EMAIL'
+	name = '$GIT_USER'
+
+" >> ~/.gitconfig

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 # Install command-line tools using Homebrew.
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -29,18 +31,11 @@ brew install bash-completion2
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
-
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -95,6 +90,16 @@ brew install tree
 brew install vbindiff
 brew install webkit2png
 brew install zopfli
+
+
+brew install zsh
+brew install terminal-notifier
+brew install the_silver_searcher
+brew install fzf
+brew install node # This installs `npm` too using the recommended installation method
+brew install z
+brew install ledger --with-python
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
