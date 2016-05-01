@@ -244,3 +244,18 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+
+# Start nginx, mysql and php version.
+function mamp(){
+	for v in "54" "55" "56" "70"
+		do
+			brew services stop homebrew/php/php$v;
+		done;
+
+	brew services start homebrew/php/php$1;
+	brew services restart nginx;
+	brew services restart mysql;
+
+}
+
