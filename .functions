@@ -246,28 +246,28 @@ function tre() {
 }
 
 
+
 # Start nginx, mysql and php version.
 function mamp(){
 	stop-fpm;
-	brew services start homebrew/php/php$1;
-	brew services restart nginx;
-	brew services restart mysql;
-	brew services restart beanstalkd;
+	sudo brew services start homebrew/php/php$1;
+	sudo brew services restart nginx;
+	sudo brew services restart mysql;
+	sudo brew services restart beanstalkd;
 }
 
 #Stop all the fpm instances
 function stop-fpm(){
 		for v in "54" "55" "56" "70"
 		do
-			brew services stop homebrew/php/php$v;
+			sudo brew services stop homebrew/php/php$v;
 		done;
 }
 
 #stop mamp.
 function stop-mamp(){
 	stop-fpm;
-	brew services stop nginx;
-	brew services stop mysql;
-	brew services stop beanstalkd;
+	sudo brew services stop nginx;
+	sudo brew services stop mysql;
+	sudo brew services stop beanstalkd;
 }
-

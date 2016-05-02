@@ -96,7 +96,7 @@ brew install zsh
 brew install terminal-notifier
 brew install the_silver_searcher
 brew install fzf
-brew install node # This installs `npm` too using the recommended installation method
+brew install homebrew/versions/node5 # This installs `npm` too using the recommended installation method
 brew install z
 brew install ledger --with-python
 
